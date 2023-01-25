@@ -33,7 +33,7 @@ ansible-galaxy collection install git+https://github.com/aristanetworks/ansible-
 git clone https://github.com/PacketAnglers/atd-avd-l2ls.git
 ```
 
-- At this point you should see the `ATD AVD L2lS` directory under the labfiles directory.
+- At this point you should see the `atd-avd-l2ls` directory under the labfiles directory.
 
 ## STEP #3 - Update Passwords and SSH Keys
 
