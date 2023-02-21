@@ -10,7 +10,10 @@ help: ## Display help message
 build: ## Build AVD Configs
 	ansible-playbook playbooks/build.yml
 
-
-.PHONY: deploy
-deploy: ## Build AVD Configs
+.PHONY: deploy_cvp
+deploy_cvp: ## Deploy AVD configs via CVP
 	ansible-playbook playbooks/deploy_cvp.yml
+
+.PHONY: deploy_eapi
+deploy_eapi: ## Deploy AVD configs via eAPI
+	ansible-playbook playbooks/deploy_eapi.yml

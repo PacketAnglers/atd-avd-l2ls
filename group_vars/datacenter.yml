@@ -56,22 +56,6 @@ mgmt_gateway: 192.168.0.1
 mgmt_interface: Management0
 mgmt_interface_vrf: default
 
-# ip_access_lists:
-#   - name: "< access list name as string >"
-#     entries:
-#       - sequence: < acl entry sequence number >
-#         action: "< permit | deny >"  # required
-#         protocol: "< ip | tcp | udp | icmp | other protocol name or number >"  # required
-#         # NOTE: A.B.C.D without a mask means host
-#         source: "< any | A.B.C.D/E | A.B.C.D >"  # required
-#         # NOTE: A.B.C.D without a mask means host
-#         destination: "< any | A.B.C.D/E | A.B.C.D >"  # required
-
-
-# management_ssh:
-#   access_groups:
-#     - name: < acl name >
-
 # NTP Servers IP or DNS name, first NTP server will be prefered, and sourced from Managment VRF
 ntp:
   servers:

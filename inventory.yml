@@ -14,8 +14,6 @@ datacenter:
           hosts:
             leaf1:
             leaf2:
-            leaf3:
-            leaf4:
         datacenter_hosts:
           hosts:
             host1:

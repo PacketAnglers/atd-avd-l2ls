@@ -11,4 +11,4 @@
         container_root: 'datacenter_fabric'
         configlets_prefix: 'AVD'
         state: present
-        execute_tasks: true
+        execute_tasks: false

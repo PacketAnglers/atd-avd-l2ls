@@ -42,7 +42,7 @@ leaf:
     RACK1:
       mlag: true
       filter:
-        tags: [ 10 ]
+        tags: [ 10,900 ]
       nodes:
         leaf1:
           id: 3
@@ -52,19 +52,6 @@ leaf:
           id: 4
           mgmt_ip: 192.168.0.13/24
           uplink_switch_interfaces: [Ethernet3, Ethernet3]
-    RACK2:
-      mlag: true
-      filter:
-        tags: [ 10 ]
-      nodes:
-        leaf3:
-          id: 5
-          mgmt_ip: 192.168.0.14/24
-          uplink_switch_interfaces: [Ethernet4, Ethernet4]
-        leaf4:
-          id: 6
-          mgmt_ip: 192.168.0.15/24
-          uplink_switch_interfaces: [Ethernet5, Ethernet5]
 
 # IDF - Host Switches
     HOST1:
