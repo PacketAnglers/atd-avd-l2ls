@@ -20,12 +20,14 @@ Since this topology is for two datacenters, the vars and inventory directories a
     |---datacenter_spines.yml
     |---datacenter.yml
 |---lab guide
-    |---Lab 1 - VLANs.md
-    |---Lab 2 - Management ACL.md
-    |---Lab 3 - dot1x.md
+    |---Lab 1 - Leaf Onboarding.md
+    |---Lab 2 - VLANs.md
+    |---Lab 3 - Management ACL.md
+    |---Lab 4 - dot1x.md
 |---playbooks
     |---build.yml
     |---deploy_cvp.yml
+    |---deploy_eapi.yml
 |---inventory.yml
 |---ansible.cfg
 |---Makefile
