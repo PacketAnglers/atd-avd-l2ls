@@ -7,7 +7,7 @@ tenants:
         svis:
           10:
             name: 'Ten'
-            tags: [10]
+            tags: ['10']
             enabled: true
             ip_virtual_router_addresses:
               - 10.10.10.1
@@ -19,4 +19,4 @@ tenants:
     l2vlans:
       900:
         name: 'unrouteable'
-        tags: [900]
+        tags: ['900']

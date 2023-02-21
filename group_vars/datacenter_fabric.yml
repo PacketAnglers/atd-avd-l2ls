@@ -42,7 +42,7 @@ leaf:
     RACK1:
       mlag: true
       filter:
-        tags: [ 10,900 ]
+        tags: [ '10','900' ]
       nodes:
         leaf1:
           id: 3
