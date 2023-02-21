@@ -1,4 +1,50 @@
-# L2LS AVD and CVP POC 
+# Deploy L2LS using AVD and CVP
+This PoC will allow you to use Arista's AVD automation framework to deploy a single datacenter, layer 2 leaf spine fabric with MLAG and vARP.  Additionally, it incorporates CVP into the CI/CD pipeline for configuration change management and auditing.  The PoC will have you modifying configuration files and implementing the changes yourself using AVD.
+
+## Datacenter Fabric Topology
+Below is a network diagram of the datacenter topology you will be working with.  
+
+![Topology](images/atd-l3ls-topo.png)
+
+## Directory Structure and Layout
+Since this topology is for two datacenters, the vars and inventory directories and files are broken out per datacenter.  This means there is an inventory file and group_vars directory for each datacenter.  Additionally, since some things are standard across both datacenters, there is a global_vars directory and file.  Finally, the playbooks for building and deploying changes are also split between the datacenters.  The tree structure below outlines all of these items:
+
+### Directory and File Structure
+```bash
+|---playbooks
+    |---build_dc1.yml
+    |---deploy_dc1.yml
+|---sites
+    |---dc1 [Inventory and VARs for DC1 only]
+    |   |---dci_configs [Non AVD Configs for Topology]
+    |   |   |---s1-core1.cfg
+    |   |   |---s1-core2.cfg
+    |   |---groups_vars
+    |   |   |---dc1_fabric_ports.yml
+    |   |   |---dc1_fabric_services.yml
+    |   |   |---dc1_fabric.yml
+    |   |   |---dc1_hosts.yml
+    |   |   |---dc1_leafs.yml
+    |   |   |---dc1_spines.yml
+    |   |   |---dc1.yml
+    |   |---inventory.yml
+    |---dc2 [Inventory and VARs for DC2 only]
+    |   |---dci_configs [Non AVD Configs for Topology]
+    |   |   |---s2-core1.cfg
+    |   |   |---s2-core2.cfg
+    |   |---groups_vars
+    |   |   |---dc2_fabric_ports.yml
+    |   |   |---dc2_fabric_services.yml
+    |   |   |---dc2_fabric.yml
+    |   |   |---dc2_hosts.yml
+    |   |   |---dc2_leafs.yml
+    |   |   |---dc2_spines.yml
+    |   |   |---dc2.yml
+    |   |---inventory.yml
+|---ansible.cfg
+|---Makefile
+|---README.md
+```
 
 # Getting AVD going in the ATD programmability IDE
 From your ATD environment, launch the programmability IDE, enter the password, and launch a new terminal:
