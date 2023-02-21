@@ -1,2 +1,22 @@
 ---
 # DC fabric services vars
+tenants:
+  fabric:
+    vrfs:
+      default:
+        svis:
+          10:
+            name: 'Ten'
+            tags: [10]
+            enabled: true
+            ip_virtual_router_addresses:
+              - 10.10.10.1
+            nodes:
+              spine1:
+                ip_address: 10.10.10.2/24
+              spine2:
+                ip_address: 10.10.10.3/24
+    l2vlans:
+      900:
+        name: 'unrouteable'
+        tags: [900]
