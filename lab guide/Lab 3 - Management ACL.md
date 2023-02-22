@@ -7,18 +7,18 @@ The below code shows the AVD data model for access-lists, as well as how to appl
 ```yaml
 ip_access_lists:
 - name: "< access list name as string >"
-    entries:
+  entries:
     - sequence: < acl entry sequence number >
-        action: "< permit | deny >"  # required
-        protocol: "< ip | tcp | udp | icmp | other protocol name or number >"  # required
-        # NOTE: A.B.C.D without a mask means host
-        source: "< any | A.B.C.D/E | A.B.C.D >"  # required
-        # NOTE: A.B.C.D without a mask means host
-        destination: "< any | A.B.C.D/E | A.B.C.D >"  # required
+      action: "< permit | deny >"  # required
+      protocol: "< ip | tcp | udp | icmp | other protocol name or number >"  # required
+      # NOTE: A.B.C.D without a mask means host
+      source: "< any | A.B.C.D/E | A.B.C.D >"  # required
+      # NOTE: A.B.C.D without a mask means host
+      destination: "< any | A.B.C.D/E | A.B.C.D >"  # required
 
 management_ssh:
-access_groups:
-    - name: < acl name >
+  access_groups:
+    - name: <acl name>
 ```
 
 <br>

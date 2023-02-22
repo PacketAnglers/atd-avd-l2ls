@@ -1,6 +1,6 @@
 ---
 # Fabric vars
----
+
 fabric_name: datacenter_fabric
 
 # Set Design Type to L2ls

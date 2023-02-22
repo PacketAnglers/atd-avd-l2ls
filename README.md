@@ -76,12 +76,12 @@ The ATD Lab switches are preconfigured with MD5 encrypted passwords.  AVD uses s
 From the Programmibility IDE Explorer:
 
 - Navigate to the `labfiles/atd-avd-l2ls/group_vars` folder.
-- Double click on the **group_vars/datacenter.yml** file to open an editor tab.
+- Double click on the `**datacenter.yml**` file to open an editor tab.
 - Update lines 4, 48, and 49.  **Follow** instructions per line below.
 
-### Update Line 4
+### Update Line 7
 
-- Update `ansible_password` key (line 4) with your unique lab password found on the **Usernames and Passwords** section of your lab topology screen.
+- Update `ansible_password` key (line 7) with your unique lab password found on the **Usernames and Passwords** section of your lab topology screen.
 
 ``` yaml
 # group_vars/datacenter.yml
@@ -90,7 +90,7 @@ From the Programmibility IDE Explorer:
 ansible_password: XXXXXXXXXXX
 ```
 
-### Update Lines 48 & 49
+### Update Lines 51 & 52
 
 - First, convert the current `arista` username type 5 password to a sha512 by running the following commands on one of your switches. Substitute XXXXXXX with your Lab's unique password.
 
@@ -107,8 +107,8 @@ show run section username | grep arista
 
 - Update the sha512_password and ssh_key with the above values. _Remember to keep the double quotes and DO NOT REMOVE `ssh-rsa` from the ssh_key._
 
-- line 49 - `sha512_password:`
-- line 50 - `ssh_key:`
+- line 51 - `sha512_password:`
+- line 52 - `ssh_key:`
 
 Your file should look similar to below.  Use values your show command output above, as they are unique to your switches.
 

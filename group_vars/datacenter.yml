@@ -48,8 +48,8 @@ local_users:
     privilege: 15
     role: network-admin
     # Update sha512_password and ssh_key (leave ssh-rsa in place) from one of your Lab switches
-    sha512_password: "<----------->"
-    ssh_key: "ssh-rsa <----------->"
+    sha512_password: "XXXXXXXXXX"
+    ssh_key: "ssh-rsa XXXXXXXXXX"
 
 # OOB Management network default gateway.
 mgmt_gateway: 192.168.0.1
