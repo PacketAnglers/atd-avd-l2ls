@@ -16,9 +16,9 @@ First you will configure the port profiles.  We will create two profiles, both d
         spanning_tree_bpduguard: < "enabled" | true | "disabled" >
         native_vlan: < native vlan number >
         structured_config:
-        phone:
-            trunk: untagged
-            vlan: <vlan id>
+            phone:
+                trunk: untagged
+                vlan: <vlan id>
         dot1x:
             port_control: < "auto" | "force-authorized" | "force-unauthorized" >
             reauthentication: < true | false >
@@ -68,9 +68,9 @@ Using the above data model, configure the following port profiles in the yaml fi
         spanning_tree_bpduguard: "enabled"
         native_vlan: 30
         structured_config:
-        phone:
-            trunk: untagged
-            vlan: 40
+            phone:
+                trunk: untagged
+                vlan: 40
         dot1x:
             port_control: "auto"
             reauthentication: true
