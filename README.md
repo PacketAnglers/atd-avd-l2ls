@@ -24,7 +24,7 @@ Since this topology is for two datacenters, the vars and inventory directories a
     |---Lab 2 - VLAN Management.md
     |---Lab 3 - Management ACL.md
     |---Lab 4 - Port Profiles.md
-    |---Lab 4 - Dot1x.md
+    |---Lab 5 - Dot1x.md
 |---playbooks
     |---build.yml
     |---deploy_cvp.yml
