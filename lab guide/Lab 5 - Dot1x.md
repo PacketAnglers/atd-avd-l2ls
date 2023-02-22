@@ -20,22 +20,22 @@ First you will configure the port profiles.  We will create two profiles, both d
             trunk: untagged
             vlan: <vlan id>
         dot1x:
-        port_control: < "auto" | "force-authorized" | "force-unauthorized" >
-        reauthentication: < true | false >
-        pae:
-            mode: authenticator
-        host_mode:
-            mode: < "multi-host" | "single-host" >
-            multi_host_authenticated: < true | false >
-        mac_based_authentication:
-            enabled: < true | false >
-        timeout:
-            reauth_period: < 60-4294967295 | server >
-            tx_period: < 1-65535 >
-        reauthorization_request_limit: < 1-10 >
-        authentication_failure:
-            action: < "allow" | "drop" >
-            allow_vlan: < 1-4094 >
+            port_control: < "auto" | "force-authorized" | "force-unauthorized" >
+            reauthentication: < true | false >
+            pae:
+                mode: authenticator
+            host_mode:
+                mode: < "multi-host" | "single-host" >
+                multi_host_authenticated: < true | false >
+            mac_based_authentication:
+                enabled: < true | false >
+            timeout:
+                reauth_period: < 60-4294967295 | server >
+                tx_period: < 1-65535 >
+            reauthorization_request_limit: < 1-10 >
+            authentication_failure:
+                action: < "allow" | "drop" >
+                allow_vlan: < 1-4094 >
         
 # This is the data model for an access port        
     <name>:
@@ -44,19 +44,19 @@ First you will configure the port profiles.  We will create two profiles, both d
         spanning_tree_bpduguard: < "enabled" | true | "disabled" >
         vlans: <access vlan>
         dot1x:
-        port_control: < "auto" | "force-authorized" | "force-unauthorized" >
-        reauthentication: < true | false >
-        pae:
-            mode: authenticator
-        mac_based_authentication:
-            enabled: < true | false >
-        timeout:
-            reauth_period: < 60-4294967295 | server >
-            tx_period: < 1-65535 >
-        reauthorization_request_limit: < 1-10 >
-        authentication_failure:
-            action: < "allow" | "drop" >
-            allow_vlan: < 1-4094 >
+            port_control: < "auto" | "force-authorized" | "force-unauthorized" >
+            reauthentication: < true | false >
+            pae:
+                mode: authenticator
+            mac_based_authentication:
+                enabled: < true | false >
+            timeout:
+                reauth_period: < 60-4294967295 | server >
+                tx_period: < 1-65535 >
+            reauthorization_request_limit: < 1-10 >
+            authentication_failure:
+                action: < "allow" | "drop" >
+                allow_vlan: < 1-4094 >
 ```
 
 Using the above data model, configure the following port profiles in the yaml file:
