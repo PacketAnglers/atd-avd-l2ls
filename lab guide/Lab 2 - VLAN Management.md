@@ -1,4 +1,4 @@
-# Lab 2 - VLAN Creation
+# **Lab 2 - VLAN Management**
 
 This lab will show you how simple day 2 operations are for creating new VLANs for your fabric.  In an environent without automation, scaling VLANs is an arduous process.  AVD allows us to make a few small modifications, and scales the VLANs to the applicable devices.  During this lab, you will modify the `datacenter_fabric_services.yml` and the `datacenter_fabric.yml`.
 

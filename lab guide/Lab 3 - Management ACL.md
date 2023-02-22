@@ -1,4 +1,4 @@
-# Lab 3 - Management ACLs
+# **Lab 3 - Management ACLs**
 
 This lab will again show the power of AVD and automating something standard that could apply to all devices in a fabric.  In this lab, you will be creating a standard management plane ACL which restricts SSH access.  The changes for this configuration only need to be completed in one place.
 

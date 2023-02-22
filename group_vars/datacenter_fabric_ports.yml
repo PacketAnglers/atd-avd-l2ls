@@ -53,17 +53,7 @@ port_profiles:
 
 network_ports:
 
-# # ---------------- leaf1/2 ----------------
 
-# - switches:
-#   # Switches can be a regex match.  IE.  switchname[12] where 1 and 2 are switchname1 and switchname2 respectively.
-#     - <switches>
-#   # Switch_ports is a list of ranges using AVD range_expand syntax (see link below).
-#   # Ex Ethernet1-48 or Ethernet2-3/1-48
-#   switch_ports:
-#     - <switch_ports>
-#   # Port-profile name, to inherit configuration.
-#   profile: <trunk phone profile name>
 
 
 

@@ -1,4 +1,4 @@
-# Lab 1 - New Leaf Pair Onboarding
+# **Lab 1 - New Leaf Pair Onboarding**
 
 This lab will show you the simplicity in adding additional leaf pairs to your existing Layer 2 leaf/spines topology.  In a non-automated topology, when deploying new leafs, you would need to duplicate or create the base configs for the new leafs, and then modify the configurations of the existing devices.  For this lab, you will be adding leafs 3 and 4 in the datacenter into the network topology by following the below steps.
 
