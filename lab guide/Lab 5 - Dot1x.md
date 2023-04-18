@@ -63,6 +63,7 @@ Using the above data model, configure the following port profiles in the yaml fi
 
 ```yaml
     v30_phone_dot1x:
+        description: "v30 access voip port"
         mode: "trunk phone" 
         spanning_tree_portfast: edge
         spanning_tree_bpduguard: "enabled"
@@ -90,6 +91,7 @@ Using the above data model, configure the following port profiles in the yaml fi
                 allow_vlan: 999
 
     v40_access_dot1x:
+        description: "v40 access port"
         mode: access
         spanning_tree_portfast: edge
         spanning_tree_bpduguard: "enabled"
