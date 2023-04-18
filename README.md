@@ -12,13 +12,13 @@ Since this topology is for two datacenters, the vars and inventory directories a
 ### Directory and File Structure
 ```bash
 |---groups_vars
-    |---datacenter_fabric_ports.yml
-    |---datacenter_fabric_services.yml
-    |---datacenter_fabric.yml
-    |---datacenter_hosts.yml
-    |---datacenter_leafs.yml
-    |---datacenter_spines.yml
-    |---datacenter.yml
+    |---dc1_fabric_ports.yml
+    |---dc1_fabric_services.yml
+    |---dc1_fabric.yml
+    |---dc1_hosts.yml
+    |---dc1_leafs.yml
+    |---dc1_spines.yml
+    |---dc1.yml
 |---lab guide
     |---Lab 1 - Leaf Onboarding.md
     |---Lab 2 - VLAN Management.md
@@ -77,7 +77,7 @@ The ATD Lab switches are preconfigured with MD5 encrypted passwords.  AVD uses s
 From the Programmibility IDE Explorer:
 
 - Navigate to the `labfiles/atd-avd-l2ls/group_vars` folder.
-- Double click on the `**datacenter.yml**` file to open an editor tab.
+- Double click on the `**dc1.yml**` file to open an editor tab.
 - Update lines 4, 48, and 49.  **Follow** instructions per line below.
 
 ### Update Line 7
@@ -114,7 +114,7 @@ show run section username | grep arista
 Your file should look similar to below.  Use values your show command output above, as they are unique to your switches.
 
 ``` yaml
-# group_vars/datacenter.yml
+# dc1/group_vars/dc1.yml
 #
 # local users to be configured on switch
 local_users:
