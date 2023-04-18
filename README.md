@@ -2,7 +2,7 @@
 This PoC will allow you to use Arista's AVD automation framework to deploy a single datacenter, layer 2 leaf spine fabric with MLAG and vARP.  Additionally, it incorporates CVP into the CI/CD pipeline for configuration change management and auditing.  The PoC will have you modifying configuration files and implementing the changes yourself using AVD.
 
 ## Datacenter Fabric Topology
-Below is a network diagram of the datacenter topology you will be working with.  
+Below is a network diagram of the portion of the dual datacenter topology you will be working with.  This will include the spines, leafs, and hosts, but not the Brdr and Core leafs.
 
 ![Topology](images/atd-topo-l2ls.png)
 
