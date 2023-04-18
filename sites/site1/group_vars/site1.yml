@@ -74,8 +74,8 @@ daemon_terminattr:
     - 192.168.0.5:9910
   # Authentication scheme used to connect to CloudVision
   cvauth:
-    method: key
-    key: atd-lab
+    method: token
+    token_file: "/tmp/token"
   # Exclude paths from Sysdb on the ingest side
   ingestexclude: /Sysdb/cell/1/agent,/Sysdb/cell/2/agent
   # Exclude paths from the shared memory table

@@ -9,11 +9,13 @@ You will modify:  `inventory.yml`
 Add the following switches into the correct location in the file:
 
 ```yaml
-leaf3
-leaf4
+s1-leaf3
+s1-leaf4
 ```
 
-2. To enable AVD to generate all the required configuration changes, you will only need to modify the ***datacenter_fabric.yml*** file. Follow the YAML file structure for the existing leaf pairs, 1 and 2, and enter the required changes using the parameters below:
+Uncomment `s1-host2` in the inventory file.
+
+2. To enable AVD to generate all the required configuration changes, you will only need to modify the ***site1_fabric.yml*** file. Follow the YAML file structure for the existing leaf pairs, 1 and 2, and enter the required changes using the parameters below:
 
 ```yaml
 group name: RACK2
@@ -21,15 +23,17 @@ group name: RACK2
       filter:
         tags: tag all vlans
 
-leaf3:
+s1-leaf3:
     id: 5
     mgmt_ip: 192.168.0.14/24
     uplink_switch_interfaces: [Ethernet4, Ethernet4]
-leaf4:
+s1-leaf4:
     id: 6
     mgmt_ip: 192.168.0.15/24
     uplink_switch_interfaces: [Ethernet5, Ethernet5]
 ```
+
+Finally, uncomment the entire `s1-host2` section.
 
 After modifying and saving the VARs file, complete the following steps to deploy the changes.
 

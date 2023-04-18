@@ -17,7 +17,7 @@ site1:
         site1_hosts:
           hosts:
             s1-host1:
-            s1-host2:
+            # s1-host2:
     site1_fabric_services:
       children:
         site1_spines:

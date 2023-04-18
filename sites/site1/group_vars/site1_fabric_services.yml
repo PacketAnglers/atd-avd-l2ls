@@ -1,5 +1,5 @@
 ---
-# DC fabric services vars
+# Site1 fabric services vars
 tenants:
   fabric:
     vrfs:

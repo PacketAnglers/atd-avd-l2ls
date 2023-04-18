@@ -1,6 +1,6 @@
 # **Lab 2 - VLAN Management**
 
-This lab will show you how simple day 2 operations are for creating new VLANs for your fabric.  In an environent without automation, scaling VLANs is an arduous process.  AVD allows us to make a few small modifications, and scales the VLANs to the applicable devices.  During this lab, you will modify the `datacenter_fabric_services.yml` and the `datacenter_fabric.yml`.
+This lab will show you how simple day 2 operations are for creating new VLANs for your fabric.  In an environent without automation, scaling VLANs is an arduous process.  AVD allows us to make a few small modifications, and scales the VLANs to the applicable devices.  During this lab, you will modify the `site1_fabric_services.yml` and the `site1_fabric.yml`.
 
 Modify the ***fabric_services*** vars file to add the following VLANs, following the syntax of the existing VLAN defintions.
 
@@ -34,7 +34,7 @@ l2vlan: 999
     tag: 999
 ```
 
-After modifying and saving the VARs file, modify the ***datacenter_fabric.yml*** file, and add the VLAN tags where necessary to ensure all the newly created VLANs are tied to both leaf pairs.  Once finished, save the ***datacenter_fabric.yml*** file and complete the following steps to deploy the changes.
+After modifying and saving the VARs file, modify the ***site1_fabric.yml*** file, and add the VLAN tags where necessary to ensure all the newly created VLANs are tied to both leaf pairs.  Once finished, save the ***site1_fabric.yml*** file and complete the following steps to deploy the changes.
 
 
 1) Issue `make build` to generate the new structured and device configurations.

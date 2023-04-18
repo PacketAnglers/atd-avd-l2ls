@@ -2,7 +2,7 @@
 
 This lab will cover how to configure dot1x enabled connected endpoints in your fabric using AVD.  This is similar to Lab 4, except the data model is different to accommodate all the dot1x parameters.  
 
-All changes for this lab will be completed in the `datacenter_fabric_ports.yml` file under the `port_profiles:` subsection.
+All changes for this lab will be completed in the `site1_fabric_ports.yml` file under the `port_profiles:` subsection.
 
 First you will configure the port profiles.  We will create two profiles, both dot1x enabled, one being a phone/pc profile, and the other a standard access profile.  The data model to be used for these port profiles is shown below.
 

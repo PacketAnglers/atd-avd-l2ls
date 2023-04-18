@@ -23,7 +23,7 @@ management_ssh:
 
 <br>
 
-The below variables show what is to be configured for the management ACL.  Use the above data model, replaced with the desired ACL configuration below, and enter it in the ***datacenter.yml*** file.
+The below variables show what is to be configured for the management ACL.  Use the above data model, replaced with the desired ACL configuration below, and enter it in the ***site1.yml*** file.
 
 **Hint:** You can put this anywhere in the datacenter.yml file, however, it would probably make the most sense right after the OOB management interface configuration section.
 
