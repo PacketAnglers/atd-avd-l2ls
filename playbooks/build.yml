@@ -1,6 +1,6 @@
 ---
 - name: Build Switch configuration
-  hosts: datacenter_fabric
+  hosts: site1_fabric
   tasks:
 
     - name: Generate Structured Variables per Device

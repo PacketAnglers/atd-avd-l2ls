@@ -56,10 +56,10 @@ pip install deepmerge
 cd labfiles
 ```
 
-- Install the AVD devel collection
+- Install the AVD collection
 
 ``` bash
-ansible-galaxy collection install git+https://github.com/aristanetworks/ansible-avd.git#/ansible_collections/arista/avd/,devel
+ansible-galaxy collection install arista.avd --force
 ```
 
 - Clone the POC Repo

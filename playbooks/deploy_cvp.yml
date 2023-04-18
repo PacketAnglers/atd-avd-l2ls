@@ -2,13 +2,14 @@
 - name: Deploying Changes via CVP
   hosts: cvp
   connection: local
-  gather_facts: false
+  
   tasks:
     - name: run CVP provisioning
       import_role:
           name: arista.avd.eos_config_deploy_cvp
       vars:
-        container_root: 'datacenter_fabric'
+        container_root: 'site1_fabric'
         configlets_prefix: 'AVD'
         state: present
         execute_tasks: false
+        

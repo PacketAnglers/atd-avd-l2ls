@@ -8,12 +8,12 @@ help: ## Display help message
 
 .PHONY: build
 build: ## Build AVD Configs
-	ansible-playbook playbooks/build.yml
+	ansible-playbook playbooks/build.yml -i sites/site1/inventory.yml
 
 .PHONY: deploy_cvp
 deploy_cvp: ## Deploy AVD configs via CVP
-	ansible-playbook playbooks/deploy_cvp.yml
+	ansible-playbook playbooks/deploy_cvp.yml -i sites/site1/inventory.yml
 
 .PHONY: deploy_eapi
 deploy_eapi: ## Deploy AVD configs via eAPI
-	ansible-playbook playbooks/deploy_eapi.yml
+	ansible-playbook playbooks/deploy_eapi.yml -i sites/site1/inventory.yml
