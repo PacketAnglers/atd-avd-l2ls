@@ -6,7 +6,7 @@ tenants:
       default:
         svis:
           10:
-            name: '1stFloor'
+            name: '1stFloor-Data'
             tags: ['10']
             enabled: true
             ip_virtual_router_addresses:
