@@ -1,0 +1,126 @@
+---
+
+  1stfloor_phone_dot1x:
+        description: "Floor 1 - PC & VoIP"
+        mode: "trunk phone" 
+        spanning_tree_portfast: edge
+        spanning_tree_bpduguard: "enabled"
+        native_vlan: 10
+        structured_config:
+            phone:
+                trunk: untagged
+                vlan: 110
+        dot1x:
+            port_control: "auto"
+            reauthentication: true
+            pae:
+                mode: authenticator
+            host_mode:
+                mode: "multi-host"
+                multi_host_authenticated: true
+            mac_based_authentication:
+                enabled: true
+            timeout:
+                reauth_period: server
+                tx_period: 3
+            reauthorization_request_limit: 3
+            authentication_failure:
+                action: allow
+                allow_vlan: 999
+
+  2ndfloor_phone_dot1x:
+        description: "Floor 2 - PC & VoIP"
+        mode: "trunk phone" 
+        spanning_tree_portfast: edge
+        spanning_tree_bpduguard: "enabled"
+        native_vlan: 20
+        structured_config:
+            phone:
+                trunk: untagged
+                vlan: 120
+        dot1x:
+            port_control: "auto"
+            reauthentication: true
+            pae:
+                mode: authenticator
+            host_mode:
+                mode: "multi-host"
+                multi_host_authenticated: true
+            mac_based_authentication:
+                enabled: true
+            timeout:
+                reauth_period: server
+                tx_period: 3
+            reauthorization_request_limit: 3
+            authentication_failure:
+                action: allow
+                allow_vlan: 999
+
+  3rdfloor_phone_dot1x:
+        description: "Floor 3 - PC & VoIP"
+        mode: "trunk phone" 
+        spanning_tree_portfast: edge
+        spanning_tree_bpduguard: "enabled"
+        native_vlan: 30
+        structured_config:
+            phone:
+                trunk: untagged
+                vlan: 130
+        dot1x:
+            port_control: "auto"
+            reauthentication: true
+            pae:
+                mode: authenticator
+            host_mode:
+                mode: "multi-host"
+                multi_host_authenticated: true
+            mac_based_authentication:
+                enabled: true
+            timeout:
+                reauth_period: server
+                tx_period: 3
+            reauthorization_request_limit: 3
+            authentication_failure:
+                action: allow
+                allow_vlan: 999
+
+
+  - switches:
+      - s1-leaf[1-9]
+    switch_ports:
+      - Ethernet10-96
+    profile: 1stfloor_phone_dot1x
+
+  - switches:
+      - s1-leaf10
+    switch_ports:
+      - Ethernet10-96
+    profile: 1stfloor_phone_dot1x
+
+  - switches:
+      - s1-leaf[1][1-9]
+    switch_ports:
+      - Ethernet10-96
+    profile: 2ndfloor_phone_dot1x
+
+  - switches:
+      - s1-leaf20
+    switch_ports:
+      - Ethernet10-96
+    profile: 2ndfloor_phone_dot1x
+
+  - switches:
+      - s1-leaf[2][1-9]
+    switch_ports:
+      - Ethernet10-96
+    profile: 3rdfloor_phone_dot1x
+
+  - switches:
+      - s1-leaf30
+    switch_ports:
+      - Ethernet10-96
+    profile: 3rdfloor_phone_dot1x
+
+
+
+2610 ports
