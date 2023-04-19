@@ -39,7 +39,7 @@ leaf:
     uplink_interfaces: [Ethernet2, Ethernet3]
     mlag_interfaces: [Ethernet1, Ethernet6]
   node_groups:
-    RACK1:
+    IDF1:
       mlag: true
       filter:
         tags: [ '10','900' ]
