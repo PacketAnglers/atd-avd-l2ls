@@ -11,14 +11,16 @@ Since this topology is for two datacenters, the vars and inventory directories a
 
 ### Directory and File Structure
 ```bash
-|---groups_vars
-    |---dc1_fabric_ports.yml
-    |---dc1_fabric_services.yml
-    |---dc1_fabric.yml
-    |---dc1_hosts.yml
-    |---dc1_leafs.yml
-    |---dc1_spines.yml
-    |---dc1.yml
+|---sites
+    |---site1
+	|---groups_vars
+	    |---site1_fabric_ports.yml
+	    |---site1_fabric_services.yml
+	    |---site1_fabric.yml
+	    |---site1_hosts.yml
+	    |---site1_leafs.yml
+	    |---site1_spines.yml
+	    |---site1.yml
 |---lab guide
     |---Lab 1 - Leaf Onboarding.md
     |---Lab 2 - VLAN Management.md
