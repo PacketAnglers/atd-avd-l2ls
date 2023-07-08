@@ -21,6 +21,7 @@ Since this topology is for two datacenters, the vars and inventory directories a
 	    |---site1_leafs.yml
 	    |---site1_spines.yml
 	    |---site1.yml
+    |---inventory.yml
 |---lab guide
     |---Lab 1 - Leaf Onboarding.md
     |---Lab 2 - VLAN Management.md
@@ -31,7 +32,6 @@ Since this topology is for two datacenters, the vars and inventory directories a
     |---build.yml
     |---deploy_cvp.yml
     |---deploy_eapi.yml
-|---inventory.yml
 |---ansible.cfg
 |---Makefile
 |---README.md
