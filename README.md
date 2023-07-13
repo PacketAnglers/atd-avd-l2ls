@@ -86,7 +86,7 @@ You can view the password is set. This is the same password displayed when you c
 echo $LABPASSPHRASE
 ```
 
-## Change directory to the actual repo
+## STEP #4 - Change directory to the actual repo
 ``` bash
 cd atd-avd-l2ls
 ```
