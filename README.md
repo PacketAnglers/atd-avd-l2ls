@@ -72,57 +72,18 @@ git clone https://github.com/PacketAnglers/atd-avd-l2ls.git
 
 - At this point you should see the `atd-avd-l2ls` directory under the labfiles directory.
 
-## STEP #3 - Update Passwords and SSH Keys
+### STEP #3 - Setup Lab Password Environment Variable
 
-The ATD Lab switches are preconfigured with MD5 encrypted passwords.  AVD uses sha512 passwords so we need to convert the current MD5 password to sha512.  **You will need to login to a switch to do this step.**
-
-From the Programmibility IDE Explorer:
-
-- Navigate to the `labfiles/atd-avd-l2ls/group_vars` folder.
-- Double click on the `**dc1.yml**` file to open an editor tab.
-- Update lines 4, 48, and 49.  **Follow** instructions per line below.
-
-### Update Line 7
-
-- Update `ansible_password` key (line 7) with your unique lab password found on the **Usernames and Passwords** section of your lab topology screen.
-
-``` yaml
-# group_vars/datacenter.yml
-#
-# Credentials for CVP and EOS Switches
-ansible_password: XXXXXXXXXXX
-```
-
-### Update Lines 51 & 52
-
-- First, convert the current `arista` username type 5 password to a sha512 by running the following commands on one of your switches. Substitute XXXXXXX with your Lab's unique password.
+Each lab comes with a unique password. We set an environment variable called `LABPASSPHRASE` with the following command. The variable is later used to generate local user passwords and connect to our switches to push configs.
 
 ``` bash
-config
-username arista privilege 15 role network-admin secret XXXXXXXX
+export LABPASSPHRASE=`cat /home/coder/.config/code-server/config.yaml| grep "password:" | awk '{print $2}'`
 ```
 
-- Retrieve password and ssh key for user `arista`.
+You can view the password is set. This is the same password displayed when you click the link to access your lab.
 
 ``` bash
-show run section username | grep arista
-```
-
-- Update the sha512_password and ssh_key with the above values. _Remember to keep the double quotes and DO NOT REMOVE `ssh-rsa` from the ssh_key._
-
-- line 51 - `sha512_password:`
-- line 52 - `ssh_key:`
-
-Your file should look similar to below.  Use values your show command output above, as they are unique to your switches.
-
-``` yaml
-# dc1/group_vars/dc1.yml
-#
-# local users to be configured on switch
-local_users:
-  arista:
-    sha512_password: "XXXXXXXXXXXXXX"
-    ssh_key: "ssh-rsa XXXXXXXXXXXXXXXXXXX"
+echo $LABPASSPHRASE
 ```
 
 ## Change directory to the actual repo
