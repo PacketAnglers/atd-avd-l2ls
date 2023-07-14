@@ -9,7 +9,7 @@ Below is a network diagram of the portion of the dual datacenter topology you wi
 ![Topology](images/atd-topo-l2ls.png)
 
 ## Directory Structure and Layout
-Since this topology is for two datacenters, the vars and inventory directories and files are broken out per datacenter.  This means there is an inventory file and group_vars directory for each datacenter.  Additionally, since some things are standard across both datacenters, there is a global_vars directory and file.  Finally, the playbooks for building and deploying changes are also split between the datacenters.  The tree structure below outlines all of these items:
+While this topology is for two datacenters, since we are deploying a simple layer 2 leaf spine fabric, we will only be using the Site 1 nodes.  Even though we are just using Site 1, we still locate the vars and inventory files under the site they are in.  The tree structure below outlines all of these items:
 
 ### Directory and File Structure
 ```bash
