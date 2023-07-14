@@ -101,7 +101,17 @@ This AVD topology includes three labs, with tasks that show Day 2 operations usi
 
 Prior to working on these labs, you will need to deploy the initial data center fabric, after you have modified the `ansible_password` as shown above.  The deployment of fabric, both initially, and of any changes, are all performed via running the appropriate ansible playbook, against the correct site inventory file.  To ease this process, alias commands are available to use via the included Makefile, which run the correct ansible playbook against the correct inventory file, using an abbreviated `make command`.
 
-Below is a description of all the available make file commands, what their purpose is, as well as which ansible playbook and inventory file they control.  
+### Initial Configuration Build & Deployment
+
+Follow the below steps of which make commands to run to build the initial fabric using AVD.
+
+1) Build datacenter configs:  `make build`
+5) Deploy datacenter configs via CVP:  `make deploy_cvp`
+    1) login to cvp and watch the tasks and change control screens to see the tasks auto-created and executed.
+7) Login to switch CLIs and verify configs and operation.
+8) Continue on with labs in the `lab guide` directory.
+
+### Below is a description of all the available make file commands, what their purpose is, as well as which ansible playbook and inventory file they control.  
 
 <br>
 
@@ -151,15 +161,3 @@ deploy_eapi: ## Deploy AVD configs via eAPI
 **Description:** This command invokes the eos_config module to deploy the created configurations only on applicable devices in the fabric, bypassing CVP and using the device eAPIs.  This playbook show an alternative way to use automation and AVD, without CVP for managing configurations.
 
 
-<br>
-<br>
-
-### Initial Configuration Build & Deployment
-
-Follow the below steps of which make commands to run to build the initial fabric using AVD.
-
-1) Build datacenter configs:  `make build`
-5) Deploy datacenter configs via CVP:  `make deploy_cvp`
-    1) login to cvp and watch the tasks and change control screens to see the tasks auto-created and executed.
-7) Login to switch CLIs and verify configs and operation.
-8) Continue on with labs in the `lab guide` directory.
